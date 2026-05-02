@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+<title>الشيخ ستور | زيادة متابعين ولايكات ومشاهدات</title>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;900&display=swap" rel="stylesheet">
+<style>
+:root{--primary:#0d0d1a;--surface:#13132a;--card:#1a1a35;--card2:#1f2050;--accent:#e94560;--accent2:#f5a623;--success:#00c896;--text:#eaeaea;--muted:#7a8499;--border:rgba(255,255,255,0.07);--border2:rgba(255,255,255,0.13);}
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{font-family:'Cairo',sans-serif;background:var(--primary);color:var(--text);min-height:100vh;direction:rtl;overflow-x:hidden;}
+::-webkit-scrollbar{width:5px;}::-webkit-scrollbar-track{background:var(--primary);}::-webkit-scrollbar-thumb{background:var(--card2);border-radius:3px;}
+header{background:rgba(13,13,26,.96);padding:0 1.5rem;border-bottom:1px solid var(--border);position:sticky;top:0;z-index:200;backdrop-filter:blur(20px);}
+.header-inner{max-width:1280px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;height:62px;gap:10px;}
+.logo{font-size:1.5rem;font-weight:900;color:#fff;white-space:nowrap;}.logo span{color:var(--accent);}
+.header-actions{display:flex;gap:8px;align-items:center;flex-shrink:0;}
+.balance-pill{background:var(--card);border:1px solid var(--border2);padding:5px 13px;border-radius:20px;font-size:.78rem;color:var(--accent2);font-weight:700;white-space:nowrap;}
+.wa-btn{display:flex;align-items:center;gap:5px;background:#25d366;color:#fff;padding:7px 13px;border-radius:10px;text-decoration:none;font-weight:700;font-size:.8rem;transition:all .2s;white-space:nowrap;}
+.wa-btn:hover{background:#20ba5a;}
+.hero{background:linear-gradient(160deg,#0f1535 0%,#1a1a2e 50%,#0d0d1a 100%);padding:2.5rem 1.5rem;text-align:center;position:relative;overflow:hidden;}
+.hbg{position:absolute;inset:0;pointer-events:none;}
+.hc{position:absolute;border-radius:50%;filter:blur(70px);opacity:.12;}
+.hc1{width:380px;height:380px;background:#e94560;top:-120px;right:-80px;}
+.hc2{width:300px;height:300px;background:#4a90d9;bottom:-80px;left:-60px;}
+.hero h1{font-size:1.9rem;font-weight:900;margin-bottom:.5rem;position:relative;}.hero h1 span{color:var(--accent);}
+.hero p{color:var(--muted);font-size:.92rem;max-width:460px;margin:0 auto 1.4rem;position:relative;line-height:1.7;}
+.plats{display:flex;gap:7px;justify-content:center;flex-wrap:wrap;position:relative;}
+.plat{background:rgba(255,255,255,.06);border:1px solid var(--border2);padding:5px 13px;border-radius:20px;font-size:.76rem;font-weight:600;}
+.trust-bar{background:var(--card);border-bottom:1px solid var(--border);}
+.trust-inner{max-width:1280px;margin:0 auto;display:grid;grid-template-columns:repeat(4,1fr);}
+.ti{padding:.9rem;text-align:center;border-left:1px solid var(--border);}.ti:last-child{border-left:none;}
+.tn{font-size:1.3rem;font-weight:900;color:var(--accent2);}
+.tl{font-size:.7rem;color:var(--muted);margin-top:2px;}
+.main{max-width:1280px;margin:0 auto;padding:1.5rem;display:grid;grid-template-columns:260px 1fr;gap:1.5rem;}
+.sidebar{display:flex;flex-direction:column;gap:1rem;}
+.scard{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:1.1rem;}
+.stitle{font-size:.72rem;font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:1.5px;margin-bottom:.8rem;}
+.fbtn{width:100%;padding:8px 11px;margin-bottom:4px;background:transparent;border:1px solid transparent;border-radius:9px;color:var(--muted);font-family:'Cairo',sans-serif;font-size:.86rem;cursor:pointer;text-align:right;transition:all .18s;display:flex;align-items:center;gap:7px;}
+.fbtn:hover{background:rgba(255,255,255,.04);color:var(--text);}
+.fbtn.active{background:var(--card2);border-color:rgba(233,69,96,.35);color:#fff;}
+.fbtn .fi{font-size:.95rem;width:18px;text-align:center;}
+.fbtn .fc{margin-right:auto;background:var(--primary);padding:1px 6px;border-radius:7px;font-size:.68rem;color:var(--muted);}
+.content-area{min-width:0;}
+.tabs{display:flex;gap:3px;background:var(--card);padding:4px;border-radius:12px;border:1px solid var(--border);margin-bottom:1.1rem;}
+.tab{flex:1;padding:8px;border:none;background:transparent;color:var(--muted);font-family:'Cairo',sans-serif;font-size:.82rem;font-weight:600;cursor:pointer;border-radius:8px;transition:all .2s;}
+.tab.active{background:var(--card2);color:#fff;}
+.search-wrap{position:relative;margin-bottom:1.1rem;}
+.search-input{width:100%;padding:10px 42px 10px 13px;background:var(--card);border:1px solid var(--border);border-radius:11px;color:var(--text);font-family:'Cairo',sans-serif;font-size:.88rem;direction:rtl;transition:border-color .2s;}
+.search-input:focus{outline:none;border-color:rgba(233,69,96,.45);}
+.search-ico{position:absolute;right:13px;top:50%;transform:translateY(-50%);color:var(--muted);pointer-events:none;}
+.services-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:.9rem;}
+.sc{background:var(--card);border:1.5px solid var(--border);border-radius:13px;padding:1rem;cursor:pointer;transition:all .22s;position:relative;overflow:hidden;}
+.sc::after{content:'';position:absolute;top:0;right:0;width:3px;height:100%;background:linear-gradient(180deg,var(--accent),var(--accent2));opacity:0;transition:opacity .2s;}
+.sc:hover{border-color:rgba(233,69,96,.35);transform:translateY(-2px);background:var(--card2);}
+.sc:hover::after,.sc.sel::after{opacity:1;}
+.sc.sel{border-color:var(--accent);background:var(--card2);}
+.sc-plat{font-size:.66rem;color:var(--accent);font-weight:700;letter-spacing:.7px;margin-bottom:4px;}
+.sc-name{font-size:.82rem;font-weight:700;margin-bottom:7px;line-height:1.5;}
+.sc-bot{display:flex;justify-content:space-between;align-items:flex-end;}
+.sc-price{font-size:.95rem;font-weight:900;color:var(--accent2);}
+.sc-price small{font-size:.62rem;color:var(--muted);font-weight:400;}
+.sc-range{font-size:.67rem;color:var(--muted);text-align:left;line-height:1.6;}
+.badge-r{display:inline-block;padding:2px 6px;border-radius:5px;font-size:.62rem;font-weight:700;background:rgba(0,200,150,.12);color:var(--success);margin-top:3px;}
+.loader{text-align:center;padding:3rem;color:var(--muted);}
+.spinner{width:36px;height:36px;border:3px solid var(--border2);border-top-color:var(--accent);border-radius:50%;animation:spin .8s linear infinite;margin:0 auto 1rem;}
+@keyframes spin{to{transform:rotate(360deg);}}
+.order-panel{background:linear-gradient(135deg,var(--card2),var(--card));border:1px solid rgba(233,69,96,.28);border-radius:15px;padding:1.4rem;margin-top:1.4rem;display:none;}
+.order-panel.show{display:block;animation:fadeUp .3s ease;}
+@keyframes fadeUp{from{opacity:0;transform:translateY(12px);}to{opacity:1;transform:translateY(0);}}
+.op-head{margin-bottom:1.1rem;padding-bottom:.9rem;border-bottom:1px solid var(--border2);}
+.op-title{font-size:.95rem;font-weight:700;margin-bottom:3px;}
+.op-meta{font-size:.76rem;color:var(--muted);}
+.form-row{margin-bottom:.85rem;}
+.form-label{font-size:.8rem;color:var(--muted);margin-bottom:4px;display:block;font-weight:600;}
+.form-input{width:100%;padding:10px 12px;background:rgba(0,0,0,.3);border:1px solid var(--border2);border-radius:9px;color:var(--text);font-family:'Cairo',sans-serif;font-size:.88rem;direction:rtl;transition:border-color .2s;}
+.form-input:focus{outline:none;border-color:var(--accent);}
+.qty-row{display:flex;align-items:center;gap:7px;}
+.qty-btn{width:36px;height:36px;background:rgba(0,0,0,.3);border:1px solid var(--border2);border-radius:8px;color:var(--text);font-size:1.1rem;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:all .2s;flex-shrink:0;}
+.qty-btn:hover{border-color:var(--accent);color:var(--accent);}
+.qty-input{flex:1;padding:8px;background:rgba(0,0,0,.3);border:1px solid var(--border2);border-radius:8px;color:var(--text);font-family:'Cairo',sans-serif;font-size:.95rem;text-align:center;}
+.qty-hint{font-size:.7rem;color:var(--muted);margin-top:3px;}
+.price-box{background:rgba(0,0,0,.25);border-radius:11px;padding:11px 13px;margin-bottom:.9rem;}
+.pb-row{display:flex;justify-content:space-between;align-items:center;padding:3px 0;}
+.pb-key{font-size:.78rem;color:var(--muted);}
+.pb-val{font-size:.82rem;font-weight:600;}
+.pb-total{border-top:1px solid var(--border2);margin-top:5px;padding-top:7px;}
+.pb-total .pb-key{color:var(--text);font-weight:700;}
+.pb-total .pb-val{font-size:1.15rem;font-weight:900;color:var(--accent2);}
+.submit-btn{width:100%;padding:13px;background:linear-gradient(135deg,var(--accent),#c73352);border:none;border-radius:11px;color:#fff;font-family:'Cairo',sans-serif;font-size:.95rem;font-weight:700;cursor:pointer;transition:all .2s;display:flex;align-items:center;justify-content:center;gap:7px;}
+.submit-btn:hover{transform:translateY(-1px);box-shadow:0 8px 22px rgba(233,69,96,.32);}
+.status-msg{margin-top:.85rem;padding:10px 13px;border-radius:9px;font-size:.86rem;font-weight:600;display:none;}
+.status-msg.success{background:rgba(0,200,150,.12);color:var(--success);border:1px solid rgba(0,200,150,.22);display:block;}
+.status-msg.error{background:rgba(233,69,96,.12);color:var(--accent);border:1px solid rgba(233,69,96,.22);display:block;}
+.status-msg.loading{background:rgba(245,166,35,.12);color:var(--accent2);border:1px solid rgba(245,166,35,.22);display:block;}
+.track-card{background:var(--card);border:1px solid var(--border);border-radius:13px;padding:1.3rem;max-width:460px;}
+.track-result{margin-top:.9rem;background:rgba(0,0,0,.2);border-radius:11px;padding:13px;display:none;}
+.tr-row{display:flex;justify-content:space-between;padding:5px 0;border-bottom:1px solid var(--border);}.tr-row:last-child{border-bottom:none;}
+.tr-k{font-size:.8rem;color:var(--muted);}
+.tr-v{font-size:.85rem;font-weight:700;}
+.how-card{background:var(--card);border:1px solid var(--border);border-radius:13px;padding:1.3rem;margin-top:1.2rem;}
+.how-title{font-size:.95rem;font-weight:700;margin-bottom:1.1rem;}
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:.9rem;}
+.step{text-align:center;padding:.7rem;}
+.step-n{width:38px;height:38px;background:linear-gradient(135deg,var(--accent),#c73352);border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:900;font-size:.85rem;margin:0 auto .6rem;}
+.step-t{font-size:.82rem;font-weight:700;margin-bottom:3px;}
+.step-d{font-size:.72rem;color:var(--muted);line-height:1.5;}
+footer{background:var(--card);border-top:1px solid var(--border);padding:1.8rem 1.5rem;text-align:center;}
+.flogo{font-size:1.25rem;font-weight:900;margin-bottom:.4rem;}.flogo span{color:var(--accent);}
+.ftxt{font-size:.78rem;color:var(--muted);margin-bottom:.9rem;}
+.fwa{display:inline-flex;align-items:center;gap:7px;background:#25d366;color:#fff;padding:10px 22px;border-radius:11px;text-decoration:none;font-weight:700;font-size:.88rem;transition:all .2s;}
+.fwa:hover{background:#20ba5a;}
+.mobile-nav{display:none;position:fixed;bottom:0;left:0;right:0;z-index:300;background:rgba(13,13,26,.97);border-top:1px solid var(--border2);backdrop-filter:blur(20px);}
+.mnav{display:flex;justify-content:space-around;padding:8px 0 max(8px,env(safe-area-inset-bottom));}
+.mb{display:flex;flex-direction:column;align-items:center;gap:2px;background:none;border:none;color:var(--muted);font-family:'Cairo',sans-serif;font-size:.62rem;cursor:pointer;padding:4px 10px;border-radius:9px;transition:color .2s;min-width:52px;}
+.mb.active,.mb:hover{color:var(--accent);}
+.mb-ico{font-size:1.25rem;}
+.filter-sheet{display:none;position:fixed;inset:0;z-index:400;background:rgba(0,0,0,.6);backdrop-filter:blur(4px);}
+.filter-sheet.open{display:flex;align-items:flex-end;}
+.fsi{background:var(--surface);border-radius:18px 18px 0 0;padding:1.4rem;width:100%;max-height:82vh;overflow-y:auto;padding-bottom:max(1.4rem,env(safe-area-inset-bottom));}
+.fsh{font-size:.95rem;font-weight:700;margin-bottom:1.1rem;display:flex;justify-content:space-between;align-items:center;}
+.fsc{background:var(--card);border:none;color:var(--text);width:30px;height:30px;border-radius:50%;cursor:pointer;font-size:1rem;display:flex;align-items:center;justify-content:center;}
+.toast{position:fixed;top:76px;left:50%;transform:translateX(-50%) translateY(-16px);background:var(--card2);border:1px solid var(--border2);padding:10px 18px;border-radius:11px;font-size:.85rem;font-weight:600;z-index:500;opacity:0;transition:all .3s;pointer-events:none;white-space:nowrap;}
+.toast.show{opacity:1;transform:translateX(-50%) translateY(0);}
+@media(max-width:900px){
+  .main{grid-template-columns:1fr;padding:1rem;}
+  .sidebar{display:none;}
+  .mobile-nav{display:block;}
+  body{padding-bottom:68px;}
+  .trust-inner{grid-template-columns:repeat(2,1fr);}
+  .ti:nth-child(2){border-left:none;}
+  .ti:nth-child(3),.ti:nth-child(4){border-top:1px solid var(--border);}
+  .ti:nth-child(4){border-left:none;}
+  .steps{grid-template-columns:1fr;}
+  footer{margin-bottom:68px;}
+}
+@media(max-width:600px){
+  .hero h1{font-size:1.5rem;}
+  .hero{padding:1.8rem 1rem;}
+  .services-grid{grid-template-columns:1fr 1fr;}
+  .balance-pill{display:none;}
+  .header-inner{height:54px;}
+  .logo{font-size:1.25rem;}
+}
+@media(max-width:380px){.services-grid{grid-template-columns:1fr;}}
+</style>
+</head>
+<body>
+<div class="toast" id="toast"></div>
+<header>
+  <div class="header-inner">
+    <div class="logo">الشيخ <span>ستور</span></div>
+    <div class="header-actions">
+      <div class="balance-pill" id="balance-display">جاري...</div>
+      <a href="https://wa.me/201012272487" target="_blank" class="wa-btn">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+        واتساب
+      </a>
+    </div>
+  </div>
+</header>
+
+<div class="hero">
+  <div class="hbg"><div class="hc hc1"></div><div class="hc hc2"></div></div>
+  <h1>زيادة <span>متابعين</span> ولايكات ومشاهدات</h1>
+  <p>أسعار منافسة — تسليم سريع وآمن — دعم على مدار الساعة</p>
+  <div class="plats">
+    <div class="plat">📱 تيك توك</div><div class="plat">📸 انستجرام</div>
+    <div class="plat">▶️ يوتيوب</div><div class="plat">👥 فيسبوك</div>
+    <div class="plat">🐦 تويتر</div><div class="plat">👻 سناب شات</div>
+  </div>
+</div>
+
+<div class="trust-bar">
+  <div class="trust-inner">
+    <div class="ti"><div class="tn" id="stat-services">-</div><div class="tl">خدمة متاحة</div></div>
+    <div class="ti"><div class="tn">5M+</div><div class="tl">طلب منفذ</div></div>
+    <div class="ti"><div class="tn">300K+</div><div class="tl">عميل راضي</div></div>
+    <div class="ti"><div class="tn">24/7</div><div class="tl">دعم متواصل</div></div>
+  </div>
+</div>
+
+<div class="main">
+  <div class="sidebar" id="sidebar">
+    <div class="scard">
+      <div class="stitle">المنصة</div>
+      <button class="fbtn active" onclick="filterPlatform('all',this)"><span class="fi">🌐</span>كل الخدمات<span class="fc" id="c-all">0</span></button>
+      <button class="fbtn" onclick="filterPlatform('tiktok',this)"><span class="fi">📱</span>تيك توك<span class="fc" id="c-tiktok">0</span></button>
+      <button class="fbtn" onclick="filterPlatform('instagram',this)"><span class="fi">📸</span>انستجرام<span class="fc" id="c-instagram">0</span></button>
+      <button class="fbtn" onclick="filterPlatform('youtube',this)"><span class="fi">▶️</span>يوتيوب<span class="fc" id="c-youtube">0</span></button>
+      <button class="fbtn" onclick="filterPlatform('facebook',this)"><span class="fi">👥</span>فيسبوك<span class="fc" id="c-facebook">0</span></button>
+      <button class="fbtn" onclick="filterPlatform('twitter',this)"><span class="fi">🐦</span>تويتر<span class="fc" id="c-twitter">0</span></button>
+      <button class="fbtn" onclick="filterPlatform('snapchat',this)"><span class="fi">👻</span>سناب شات<span class="fc" id="c-snapchat">0</span></button>
+      <button class="fbtn" onclick="filterPlatform('telegram',this)"><span class="fi">✈️</span>تليجرام<span class="fc" id="c-telegram">0</span></button>
+    </div>
+    <div class="scard">
+      <div class="stitle">نوع الخدمة</div>
+      <button class="fbtn active" onclick="filterType('all',this)"><span class="fi">⭐</span>الكل</button>
+      <button class="fbtn" onclick="filterType('followers',this)"><span class="fi">👥</span>متابعين</button>
+      <button class="fbtn" onclick="filterType('likes',this)"><span class="fi">❤️</span>لايكات</button>
+      <button class="fbtn" onclick="filterType('views',this)"><span class="fi">👁️</span>مشاهدات</button>
+      <button class="fbtn" onclick="filterType('comments',this)"><span class="fi">💬</span>تعليقات</button>
+    </div>
+  </div>
+
+  <div class="content-area">
+    <div class="tabs">
+      <button class="tab active" onclick="setTab('order',this)">🛒 طلب جديد</button>
+      <button class="tab" onclick="setTab('track',this)">📦 تتبع طلب</button>
+      <button class="tab" onclick="setTab('how',this)">❓ كيف يعمل</button>
+    </div>
+
+    <div id="tab-order">
+      <div class="search-wrap">
+        <span class="search-ico">🔍</span>
+        <input type="text" class="search-input" placeholder="ابحث: متابعين تيك توك، لايكات انستجرام..." oninput="searchServices(this.value)">
+      </div>
+      <div id="services-loader" class="loader"><div class="spinner"></div><p>جاري تحميل الخدمات...</p></div>
+      <div class="services-grid" id="services-grid" style="display:none;"></div>
+      <div id="more-wrap" style="text-align:center;margin-top:1rem;display:none;">
+        <button onclick="showMore()" style="background:var(--card);border:1px solid var(--border2);color:var(--text);padding:9px 22px;border-radius:9px;cursor:pointer;font-family:'Cairo',sans-serif;font-size:.85rem;">عرض المزيد</button>
+      </div>
+
+      <div class="order-panel" id="order-panel">
+        <div class="op-head">
+          <div class="op-title" id="sel-name">اختر خدمة أولاً</div>
+          <div class="op-meta" id="sel-meta"></div>
+        </div>
+        <div class="form-row">
+          <label class="form-label">🔗 رابط الحساب أو المنشور</label>
+          <input type="url" class="form-input" id="order-link" placeholder="https://www.tiktok.com/@username">
+        </div>
+        <div class="form-row">
+          <label class="form-label">🔢 الكمية</label>
+          <div class="qty-row">
+            <button class="qty-btn" onclick="changeQty(-100)">−</button>
+            <input type="number" class="qty-input" id="order-qty" value="100" oninput="updateTotal()">
+            <button class="qty-btn" onclick="changeQty(+100)">+</button>
+          </div>
+          <div class="qty-hint" id="qty-hint">الحد الأدنى: - | الحد الأقصى: -</div>
+        </div>
+        <div class="price-box">
+          <div class="pb-row"><span class="pb-key">سعر الخدمة</span><span class="pb-val" id="pb-base">-</span></div>
+          <div class="pb-row"><span class="pb-key">الكمية</span><span class="pb-val" id="pb-qty">-</span></div>
+          <div class="pb-row pb-total"><span class="pb-key">الإجمالي</span><span class="pb-val" id="pb-total">0.00 EGP</span></div>
+        </div>
+        <div class="form-row">
+          <label class="form-label">👤 اسمك (اختياري)</label>
+          <input type="text" class="form-input" id="customer-name" placeholder="اسمك الكريم">
+        </div>
+        <div class="form-row">
+          <label class="form-label">📱 رقم هاتفك</label>
+          <input type="tel" class="form-input" id="customer-phone" placeholder="01xxxxxxxxx">
+        </div>
+        <button class="submit-btn" onclick="placeOrder()">
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+          اطلب الآن عبر واتساب
+        </button>
+        <div class="status-msg" id="order-status"></div>
+      </div>
+    </div>
+
+    <div id="tab-track" style="display:none;">
+      <div class="track-card">
+        <div class="stitle">تتبع حالة طلبك</div>
+        <div class="form-row">
+          <label class="form-label">رقم الطلب</label>
+          <input type="number" class="form-input" id="track-id" placeholder="مثال: 23501">
+        </div>
+        <button class="submit-btn" onclick="trackOrder()" style="margin-top:8px;">🔍 تتبع الطلب</button>
+        <div class="status-msg" id="track-status"></div>
+        <div class="track-result" id="track-result">
+          <div class="tr-row"><span class="tr-k">الحالة</span><span class="tr-v" id="tr-status"></span></div>
+          <div class="tr-row"><span class="tr-k">المتبقي</span><span class="tr-v" id="tr-remains"></span></div>
+          <div class="tr-row"><span class="tr-k">التكلفة</span><span class="tr-v" id="tr-charge" style="color:var(--accent2);"></span></div>
+        </div>
+      </div>
+    </div>
+
+    <div id="tab-how" style="display:none;">
+      <div class="how-card">
+        <div class="how-title">🚀 كيف تطلب في 3 خطوات؟</div>
+        <div class="steps">
+          <div class="step"><div class="step-n">1</div><div class="step-t">اختر الخدمة</div><div class="step-d">تصفح الخدمات واختار اللي تناسبك</div></div>
+          <div class="step"><div class="step-n">2</div><div class="step-t">أدخل الرابط والكمية</div><div class="step-d">اكتب رابط حسابك واختار الكمية</div></div>
+          <div class="step"><div class="step-n">3</div><div class="step-t">تواصل وادفع</div><div class="step-d">واتساب هيفتح تلقائياً بتفاصيل طلبك</div></div>
+        </div>
+      </div>
+      <div class="how-card">
+        <div class="how-title">💳 طرق الدفع</div>
+        <div style="display:flex;gap:9px;flex-wrap:wrap;margin-top:.4rem;">
+          <div style="background:rgba(0,200,150,.1);border:1px solid rgba(0,200,150,.2);padding:7px 14px;border-radius:9px;font-size:.82rem;color:var(--success);font-weight:700;">💚 انستاباي</div>
+          <div style="background:rgba(233,69,96,.1);border:1px solid rgba(233,69,96,.2);padding:7px 14px;border-radius:9px;font-size:.82rem;color:var(--accent);font-weight:700;">📱 فودافون كاش</div>
+          <div style="background:rgba(245,166,35,.1);border:1px solid rgba(245,166,35,.2);padding:7px 14px;border-radius:9px;font-size:.82rem;color:var(--accent2);font-weight:700;">🏦 تحويل بنكي</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <div class="flogo">الشيخ <span>ستور</span></div>
+  <div class="ftxt">أفضل أسعار لزيادة المتابعين والتفاعل على جميع المنصات</div>
+  <a href="https://wa.me/201012272487" target="_blank" class="fwa">
+    <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+    تواصل على واتساب
+  </a>
+</footer>
+
+<nav class="mobile-nav">
+  <div class="mnav">
+    <button class="mb active" id="mnav-order" onclick="mobileTab('order')"><span class="mb-ico">🛒</span>طلب</button>
+    <button class="mb" id="mnav-filter" onclick="toggleSheet()"><span class="mb-ico">🔍</span>فلتر</button>
+    <button class="mb" id="mnav-track" onclick="mobileTab('track')"><span class="mb-ico">📦</span>تتبع</button>
+    <button class="mb" onclick="window.open('https://wa.me/201012272487','_blank')"><span class="mb-ico">💬</span>واتساب</button>
+  </div>
+</nav>
+
+<div class="filter-sheet" id="fsheet" onclick="sheetBgClick(event)">
+  <div class="fsi">
+    <div class="fsh"><span>فلترة الخدمات</span><button class="fsc" onclick="toggleSheet()">✕</button></div>
+    <div class="stitle">المنصة</div>
+    <button class="fbtn active" id="mf-all" onclick="filterPlatform('all',this,true)"><span class="fi">🌐</span>كل الخدمات<span class="fc" id="mc-all">0</span></button>
+    <button class="fbtn" id="mf-tiktok" onclick="filterPlatform('tiktok',this,true)"><span class="fi">📱</span>تيك توك<span class="fc" id="mc-tiktok">0</span></button>
+    <button class="fbtn" id="mf-instagram" onclick="filterPlatform('instagram',this,true)"><span class="fi">📸</span>انستجرام<span class="fc" id="mc-instagram">0</span></button>
+    <button class="fbtn" id="mf-youtube" onclick="filterPlatform('youtube',this,true)"><span class="fi">▶️</span>يوتيوب<span class="fc" id="mc-youtube">0</span></button>
+    <button class="fbtn" id="mf-facebook" onclick="filterPlatform('facebook',this,true)"><span class="fi">👥</span>فيسبوك<span class="fc" id="mc-facebook">0</span></button>
+    <button class="fbtn" id="mf-twitter" onclick="filterPlatform('twitter',this,true)"><span class="fi">🐦</span>تويتر<span class="fc" id="mc-twitter">0</span></button>
+    <button class="fbtn" id="mf-snapchat" onclick="filterPlatform('snapchat',this,true)"><span class="fi">👻</span>سناب شات<span class="fc" id="mc-snapchat">0</span></button>
+    <button class="fbtn" id="mf-telegram" onclick="filterPlatform('telegram',this,true)"><span class="fi">✈️</span>تليجرام<span class="fc" id="mc-telegram">0</span></button>
+    <div class="stitle" style="margin-top:1rem;">نوع الخدمة</div>
+    <button class="fbtn active" onclick="filterType('all',this)"><span class="fi">⭐</span>الكل</button>
+    <button class="fbtn" onclick="filterType('followers',this)"><span class="fi">👥</span>متابعين</button>
+    <button class="fbtn" onclick="filterType('likes',this)"><span class="fi">❤️</span>لايكات</button>
+    <button class="fbtn" onclick="filterType('views',this)"><span class="fi">👁️</span>مشاهدات</button>
+    <button class="fbtn" onclick="filterType('comments',this)"><span class="fi">💬</span>تعليقات</button>
+  </div>
+</div>
+
+<script>
+const API_KEY='abc6129c54f857aedc78d8bb57d52c88';
+const API_URL='https://elsheikh.ahmef54a.workers.dev';
+const WA_NUM='201012272487';
+const USD_TO_EGP=50;
+
+function getMargin(stype){
+  if(stype==='followers') return 30;
+  if(stype==='likes'||stype==='views') return 15;
+  return 10;
+}
+function sellPer1000(rateUSD,stype){
+  return parseFloat(rateUSD)*USD_TO_EGP + getMargin(stype);
+}
+
+let allServices=[],filteredServices=[],selectedService=null;
+let curPlat='all',curType='all',showCount=40;
+
+function detectPlatform(name,category){
+  const cat=(category||'').toLowerCase(), nm=(name||'').toLowerCase();
+  if(cat.includes('tiktok')||cat.includes('تيك توك')||cat.includes('tik tok')) return 'tiktok';
+  if(cat.includes('instagram')||cat.includes('انستقرام')||cat.includes('انستجرام')||cat.includes('insta')) return 'instagram';
+  if(cat.includes('youtube')||cat.includes('يوتيوب')) return 'youtube';
+  if(cat.includes('facebook')||cat.includes('فيسبوك')) return 'facebook';
+  if(cat.includes('twitter')||cat.includes('تويتر')||cat.includes('تويت')||cat.includes('x -')) return 'twitter';
+  if(cat.includes('snapchat')||cat.includes('سناب')) return 'snapchat';
+  if(cat.includes('telegram')||cat.includes('تيليجرام')||cat.includes('تليجرام')) return 'telegram';
+  if(nm.includes('tiktok')||nm.includes('تيك توك')) return 'tiktok';
+  if(nm.includes('instagram')||nm.includes('انستقرام')||nm.includes('انستجرام')) return 'instagram';
+  if(nm.includes('youtube')||nm.includes('يوتيوب')) return 'youtube';
+  if(nm.includes('facebook')||nm.includes('فيسبوك')) return 'facebook';
+  if(nm.includes('twitter')||nm.includes('تويتر')) return 'twitter';
+  if(nm.includes('snapchat')||nm.includes('سناب')) return 'snapchat';
+  if(nm.includes('telegram')||nm.includes('تليجرام')||nm.includes('تيليجرام')) return 'telegram';
+  return 'other';
+}
+function detectType(name){
+  const t=(name||'').toLowerCase();
+  if(t.includes('follower')||t.includes('متابع')||t.includes('subscriber')||t.includes('مشترك')) return 'followers';
+  if(t.includes('like')||t.includes('لايك')||t.includes('اعجاب')||t.includes('إعجاب')) return 'likes';
+  if(t.includes('view')||t.includes('مشاهد')) return 'views';
+  if(t.includes('comment')||t.includes('تعليق')) return 'comments';
+  return 'other';
+}
+function platLabel(p){return{tiktok:'تيك توك',instagram:'انستجرام',youtube:'يوتيوب',facebook:'فيسبوك',twitter:'تويتر',snapchat:'سناب شات',telegram:'تليجرام',other:'أخرى'}[p]||p;}
+
+async function loadServices(){
+  try{
+    const res=await fetch(`${API_URL}?key=${API_KEY}&action=services`);
+    const data=await res.json();
+    allServices=data.map(s=>({...s,platform:detectPlatform(s.name,s.category),stype:detectType(s.name)}));
+    document.getElementById('stat-services').textContent=allServices.length;
+    updateCounts(); applyFilters();
+    document.getElementById('services-loader').style.display='none';
+    document.getElementById('services-grid').style.display='grid';
+  }catch(e){document.getElementById('services-loader').innerHTML='<p style="color:var(--accent)">تعذر تحميل الخدمات، يرجى تحديث الصفحة</p>';}
+}
+async function loadBalance(){
+  try{
+    const res=await fetch(`${API_URL}?key=${API_KEY}&action=balance`);
+    const data=await res.json();
+    const egp=(parseFloat(data.balance)*USD_TO_EGP).toFixed(0);
+    document.getElementById('balance-display').textContent=`رصيد: ${parseInt(egp).toLocaleString()} EGP`;
+  }catch(e){document.getElementById('balance-display').textContent='الشيخ ستور';}
+}
+function updateCounts(){
+  const ps=['tiktok','instagram','youtube','facebook','twitter','snapchat','telegram'];
+  ['c-all','mc-all'].forEach(id=>{const el=document.getElementById(id);if(el)el.textContent=allServices.length;});
+  ps.forEach(p=>{
+    const cnt=allServices.filter(s=>s.platform===p).length;
+    [`c-${p}`,`mc-${p}`].forEach(id=>{const el=document.getElementById(id);if(el)el.textContent=cnt;});
+  });
+}
+function applyFilters(search=''){
+  showCount=40;
+  filteredServices=allServices.filter(s=>{
+    const mp=curPlat==='all'||s.platform===curPlat;
+    const mt=curType==='all'||s.stype===curType;
+    const ms=!search||s.name.toLowerCase().includes(search.toLowerCase())||(s.category||'').toLowerCase().includes(search.toLowerCase());
+    return mp&&mt&&ms;
+  });
+  renderServices();
+}
+function renderServices(){
+  const grid=document.getElementById('services-grid');
+  const mw=document.getElementById('more-wrap');
+  if(!filteredServices.length){grid.innerHTML='<div style="grid-column:1/-1;text-align:center;color:var(--muted);padding:3rem;">لا توجد خدمات تطابق البحث</div>';mw.style.display='none';return;}
+  grid.innerHTML=filteredServices.slice(0,showCount).map(s=>{
+    const sp=sellPer1000(s.rate,s.stype);
+    return `<div class="sc ${selectedService?.service===s.service?'sel':''}" onclick="selectService(${s.service})">
+      <div class="sc-plat">${platLabel(s.platform)}</div>
+      <div class="sc-name">${s.name}</div>
+      <div class="sc-bot">
+        <div><div class="sc-price">${sp.toFixed(2)} <small>EGP/1000</small></div>${s.refill?'<span class="badge-r">ضمان استرجاع</span>':''}</div>
+        <div class="sc-range">من ${parseInt(s.min).toLocaleString()}<br>حتى ${parseInt(s.max).toLocaleString()}</div>
+      </div>
+    </div>`;
+  }).join('');
+  mw.style.display=filteredServices.length>showCount?'block':'none';
+}
+function showMore(){showCount+=40;renderServices();}
+
+function selectService(id){
+  selectedService=allServices.find(s=>s.service===id);
+  if(!selectedService) return;
+  const sp=sellPer1000(selectedService.rate,selectedService.stype);
+  document.getElementById('sel-name').textContent=selectedService.name;
+  document.getElementById('sel-meta').textContent=`${sp.toFixed(2)} EGP لكل 1000 | من ${parseInt(selectedService.min).toLocaleString()} حتى ${parseInt(selectedService.max).toLocaleString()}`;
+  document.getElementById('qty-hint').textContent=`الحد الأدنى: ${parseInt(selectedService.min).toLocaleString()} | الحد الأقصى: ${parseInt(selectedService.max).toLocaleString()}`;
+  document.getElementById('order-qty').min=selectedService.min;
+  document.getElementById('order-qty').max=selectedService.max;
+  document.getElementById('order-qty').value=selectedService.min;
+  updateTotal();
+  const panel=document.getElementById('order-panel');
+  panel.classList.add('show');
+  setTimeout(()=>panel.scrollIntoView({behavior:'smooth',block:'nearest'}),100);
+  renderServices();
+}
+function updateTotal(){
+  if(!selectedService) return;
+  const qty=parseInt(document.getElementById('order-qty').value)||0;
+  const sp=sellPer1000(selectedService.rate,selectedService.stype);
+  const total=(qty*sp/1000).toFixed(2);
+  document.getElementById('pb-base').textContent=`${sp.toFixed(2)} EGP / 1000`;
+  document.getElementById('pb-qty').textContent=qty.toLocaleString();
+  document.getElementById('pb-total').textContent=`${total} EGP`;
+}
+function changeQty(d){
+  const inp=document.getElementById('order-qty');
+  const min=parseInt(selectedService?.min)||1, max=parseInt(selectedService?.max)||999999;
+  inp.value=Math.max(min,Math.min(max,(parseInt(inp.value)||0)+d));
+  updateTotal();
+}
+function placeOrder(){
+  if(!selectedService) return;
+  const link=document.getElementById('order-link').value.trim();
+  const qty=parseInt(document.getElementById('order-qty').value);
+  const name=document.getElementById('customer-name').value.trim();
+  const phone=document.getElementById('customer-phone').value.trim();
+  const st=document.getElementById('order-status');
+  if(!link){showStatus(st,'من فضلك أدخل الرابط','error');return;}
+  if(!qty||qty<selectedService.min||qty>selectedService.max){showStatus(st,`الكمية بين ${parseInt(selectedService.min).toLocaleString()} و ${parseInt(selectedService.max).toLocaleString()}`,'error');return;}
+  const sp=sellPer1000(selectedService.rate,selectedService.stype);
+  const total=(qty*sp/1000).toFixed(2);
+  const msg=`🛒 *طلب جديد — الشيخ ستور*\n\n📦 الخدمة: ${selectedService.name}\n🔢 الكمية: ${qty.toLocaleString()}\n🔗 الرابط: ${link}\n💰 الإجمالي: ${total} EGP\n🆔 كود: #${selectedService.service}`+(name?`\n👤 ${name}`:'')+(phone?`\n📱 ${phone}`:'')+`\n\n_الشيخ ستور_`;
+  window.open(`https://wa.me/${WA_NUM}?text=${encodeURIComponent(msg)}`,'_blank');
+  showStatus(st,'✅ تم تحويلك إلى واتساب لإتمام الطلب والدفع','success');
+}
+function filterPlatform(p,btn,fromSheet=false){
+  curPlat=p;
+  document.querySelectorAll('.sidebar .fbtn').forEach(b=>b.classList.remove('active'));
+  document.querySelectorAll('.filter-sheet .fbtn').forEach(b=>{if(b.id&&b.id.startsWith('mf-'))b.classList.remove('active');});
+  if(btn) btn.classList.add('active');
+  applyFilters(document.querySelector('.search-input')?.value||'');
+  if(fromSheet){document.getElementById('fsheet').classList.remove('open');showToast('تم الفلتر: '+(platLabel(p)==='أخرى'?'كل الخدمات':platLabel(p)));}
+}
+function filterType(t,btn){
+  curType=t;
+  applyFilters(document.querySelector('.search-input')?.value||'');
+}
+function searchServices(v){applyFilters(v);}
+function setTab(tab,btn){
+  document.querySelectorAll('.tab').forEach(b=>b.classList.remove('active'));
+  if(btn) btn.classList.add('active');
+  ['order','track','how'].forEach(t=>document.getElementById('tab-'+t).style.display=t===tab?'block':'none');
+}
+function mobileTab(tab){
+  document.querySelectorAll('.mb').forEach(b=>b.classList.remove('active'));
+  document.getElementById('mnav-'+tab)?.classList.add('active');
+  setTab(tab);
+  setTimeout(()=>window.scrollTo({top:document.querySelector('.main').offsetTop-65,behavior:'smooth'}),50);
+}
+function toggleSheet(){document.getElementById('fsheet').classList.toggle('open');}
+function sheetBgClick(e){if(e.target===document.getElementById('fsheet'))document.getElementById('fsheet').classList.remove('open');}
+async function trackOrder(){
+  const id=document.getElementById('track-id').value.trim();
+  const st=document.getElementById('track-status');
+  const res=document.getElementById('track-result');
+  if(!id){showStatus(st,'أدخل رقم الطلب','error');return;}
+  showStatus(st,'جاري البحث...','loading'); res.style.display='none';
+  try{
+    const r=await fetch(`${API_URL}?key=${API_KEY}&action=status&order=${id}`);
+    const d=await r.json();
+    if(d.error){showStatus(st,d.error,'error');return;}
+    st.style.display='none';
+    const sm={'Completed':'مكتمل ✅','In progress':'جاري التنفيذ ⏳','Pending':'في الانتظار ⌛','Partial':'جزئي ⚠️','Canceled':'ملغي ❌','Processing':'قيد المعالجة 🔄'};
+    document.getElementById('tr-status').textContent=sm[d.status]||d.status;
+    document.getElementById('tr-remains').textContent=d.remains||'0';
+    document.getElementById('tr-charge').textContent=`${(parseFloat(d.charge||0)*USD_TO_EGP).toFixed(2)} EGP`;
+    res.style.display='block';
+  }catch(e){showStatus(st,'حدث خطأ، يرجى المحاولة مرة أخرى','error');}
+}
+function showStatus(el,msg,type){el.textContent=msg;el.className='status-msg '+type;}
+function showToast(msg){const t=document.getElementById('toast');t.textContent=msg;t.classList.add('show');setTimeout(()=>t.classList.remove('show'),2400);}
+loadServices();loadBalance();
+</script>
+</body>
+</html>
